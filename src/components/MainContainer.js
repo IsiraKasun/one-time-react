@@ -78,6 +78,7 @@ const MainContainer = () => {
         setSubject('');
         setBody('');
         setIsSubmitBtnClicked(false);
+        setLinkCopied(false);
     }
 
     return (
@@ -103,7 +104,7 @@ const MainContainer = () => {
                 <Form>
                     <TextField size="small" id="linkField" variant="outlined" sx={{my: '2%', ml: '2%', mr: '1%', width: '80%'}} readOnly={true} value={prepareMessageLink(link.current)} InputProps={{readOnly: true}}/>
                     <Button variant="contained" sx={{mt: '2%', ml: '1%', mr: '2%', width: '14%'}} startIcon={linkCopied ? <DoneIcon/> : <ContentCopyIcon />} onClick={handleCopy} >{linkCopied ? 'Copied' : 'Copy'}</Button>
-                    <Button variant="contained" color="success" sx={{mb: '2%', mx: 'auto'}} onClick={handleNewMessage}>New Message</Button>
+                    <Button variant="contained" color="success" sx={{mb: '2%', mx: 'auto'}} onClick={handleNewMessage}>Compose New Message</Button>
                 </Form>
             )}
             
