@@ -1,7 +1,8 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { rootRiderct } from "./components/layouts/rootRedirect";
-import Main from "./components/layouts/Main"
+import Main from "./components/layouts/Main";
+import Message from "./components/layouts/Message";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Main />,
+      },
+      {
+        path: "message/:linkId",
+        element: <Message />
       }
     ],
   },
